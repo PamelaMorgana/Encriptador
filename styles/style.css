@@ -16,7 +16,7 @@ body{
     box-sizing: border-box;
 }
 .header{
-    padding: 2.5rem;
+    padding: .5rem;
     display: flex;
     justify-content: center;
     background-color: var(--color-terciario);
@@ -30,8 +30,8 @@ body{
 .encriptador{
     display: flex;
     justify-content: space-around;
-    gap: 80px;
-    margin: 2.5rem;
+    gap: 10px;
+    margin: 2rem;
 }
 .encriptador__envia{
     display: flex;
@@ -40,17 +40,17 @@ body{
 }
 .contenedor{
     display: flex;
-    margin: 2rem;
+    margin: .5rem;
 }
 .contenedor__texto{
     background-color: var(--color-secundario);
     color: var(--color-obscuro);
     font-family: var(--fuente-inter);
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 400;
     resize: none;
     width: 100%;
-    height: 37rem;
+    height: 25rem;
     border-color: var(--color-secundario);
     overflow: auto;
 }
@@ -60,41 +60,42 @@ body{
 }
 .alerta{
     display: flex;
-    margin-left: 2rem;
-    gap: 2px;
+    margin-left: .5rem;
+    gap: 5px;
+    font-family: var(--fuente-inter);
+    font-size: small;
 }
 .alerta__vector{
-    height: 1rem;
-    width: 1rem;
+    height: .8rem;
+    width: .8rem;
 }
 .botones{
     display: flex;
     gap: 24px;
     justify-content: center;
     line-height: 4rem;
-    margin: 2rem;
+    margin: .5rem;
 }
 .boton__encriptar{
     font-family: var(--fuente-inter);
     font-weight: 400;
-    font-size: 16px;
+    font-size: .75rem;
     background-color: var(--color-obscuro);
     color: var(--color-primario);
     border-radius: 1.5rem;
-    padding: 1.5rem;
-    font-size: 1rem;
-    width: 20.5rem;
+    padding: .5rem;
+    width: 15rem;
     border-color: var(--color-secundario);
 }
 .boton__desencriptar{
     font-family: var(--fuente-inter);
     font-weight: 400;
+    font-size: .75rem;
     background-color: var(--color-primario);
     color: var(--color-obscuro);
     border-radius: 1.5rem;
-    padding: 1.5rem;
-    font-size: 1rem;
-    width: 20.5rem;
+    padding: .5rem;
+    width: 15rem;
     border-color: var(--color-obscuro);
 }
 .boton__encriptar:hover{
@@ -109,30 +110,36 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 35%;
-    height: 59rem;
+    width: 25%;
+    height: 27rem;
     padding: 2rem;
     border-radius: 1.5rem;
     overflow: auto;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .desencriptador__imagen{
-    margin: 2rem;
+    margin: .5rem;
+    height: 15rem;
+    width: 15rem;
 }
 .desencriptador__subtitulo{
     font-family: var(--fuente-inter);
     font-weight: 700;
+    font-size: medium;
     margin: .5rem;
+    text-align: center;
 }
 .desencriptador__texto{
     font-family: var(--fuente-inter);
     font-weight: 400;
+    font-size: small;
     margin: .5rem;
     text-align: center;
 }
 .texto__estilizado{
     color: var(--color-obscuro);
     font-family: var(--fuente-inter);
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 400;
     text-align: center;
     overflow-wrap: anywhere;
@@ -140,28 +147,25 @@ body{
 .copiar__boton{
     font-family: var(--fuente-inter);
     font-weight: 400;
+    font-size: .75rem;
     background-color: var(--color-primario);
     color: var(--color-obscuro);
     border-radius: 1.5rem;
-    padding: 1.5rem;
-    font-size: 1rem;
-    width: 20.5rem;
+    padding: .5rem;
+    width: 15rem;
     border-color: var(--color-obscuro);
 }
 .footer{
-    padding: 1.5rem;
+    padding: .5rem;
     text-align: center;
     color: var(--color-primario);
     font-family: var(--fuente-inter);
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 400;
     background-color: var(--color-terciario);
     width: auto;
 }
 @media (max-width: 1023px){
-    .header{
-        padding: 5%;
-    }
     .encriptador{
         display: flex;
         flex-direction: column;
@@ -178,11 +182,15 @@ body{
         justify-content: center;
         width: auto;
         height: 5%;
-        padding: 2rem;
-        border-radius: 1.5rem;
     }
     .desencriptador__imagen{
         display: none;
+    }
+    .botones{
+        width: auto;
+    }
+    .copiar__boton{
+        width: auto;
     }
 }
 @media (max-width: 767px){
@@ -204,7 +212,9 @@ body{
         flex-direction: column;
         width: auto;
     }
-
+    .copiar__boton{
+        width: auto;
+    }
     .desencriptador{
         background-color: var(--color-primario);
         display: flex;
