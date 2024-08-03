@@ -1,17 +1,11 @@
-function validarTexto(texto) {
-    if (/[^a-z\s]/.test(texto)) {
-        alert("El texto solo debe contener letras minúsculas y sin acentos.");
-        limpiarCaja();
-    }
-    return;
-}
-
 function usuarioEncripta() {
     let textoUsuario = document.getElementById("textarea").value;
     textoUsuario = validarTexto(textoUsuario);
-    const textoEncriptado = encriptarTexto(textoUsuario);
-    mostrarTextoEncriptado(textoEncriptado);
-    limpiarCaja();
+    if (textoUsuario !== undefined) {
+        const textoEncriptado = encriptarTexto(textoUsuario);
+        mostrarTextoEncriptado(textoEncriptado);
+        limpiarCaja();
+    }
 }
 
 function encriptarTexto(texto) {
@@ -42,9 +36,11 @@ function mostrarTextoEncriptado(texto) {
 function usuarioDesencripta() {
     let textoUsuario = document.getElementById("textarea").value;
     textoUsuario = validarTexto(textoUsuario);
-    const textoDesencriptado = desencriptarTexto(textoUsuario);
-    mostrarTextoDesencriptado(textoDesencriptado);
-    limpiarCaja();
+    if (textoUsuario !== undefined) {
+        const textoDesencriptado = desencriptarTexto(textoUsuario);
+        mostrarTextoDesencriptado(textoDesencriptado);
+        limpiarCaja();
+    }
 }
 
 function desencriptarTexto(texto) {
@@ -83,14 +79,23 @@ function copiarTexto() {
         alert("Texto copiado al portapapeles");
         limpiarDesencriptado();
     }).catch(err => {
-        alert("Error al copiar el texto: ", err);
+        alert("Error al copiar el texto: " + err);
     });
 }
-//
+
 function limpiarDesencriptado() {
     document.getElementById("encriptado").innerHTML = `
         <img class="desencriptador__imagen" src="arrays/Muñeco.png" alt="Muñeco">
         <h2 class="desencriptador__subtitulo">Ningun mensaje fue encontrado</h2>
         <p class="desencriptador__texto">Ingresa el texto que deseas encriptar o desencriptar.</p>    
-    `; // Limpia caja de desencriptado
+    `;
+}
+
+function validarTexto(texto) {
+    if (/[^a-z\s]/.test(texto)) {
+        alert("El texto solo debe contener letras minúsculas y sin acentos.");
+        limpiarCaja();
+        return undefined;
+    }
+    return texto;
 }
