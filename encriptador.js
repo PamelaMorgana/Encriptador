@@ -86,11 +86,3 @@ function limpiarDesencriptado() {
         <p class="desencriptador__texto">Ingresa el texto que deseas encriptar o desencriptar.</p>    
     `; // Limpia caja de desencriptado
 }
-
-function validarTexto(texto) {
-    const textoLimpio = texto.toLowerCase().replace(/[^a-z\s]/g, '');
-    if (texto !== textoLimpio) {
-        alert("Por favor, ingrese solo letras minúsculas y sin acentos.");
-    }
-    return textoLimpio;
-}
