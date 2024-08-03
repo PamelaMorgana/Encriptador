@@ -1,3 +1,11 @@
+function validarTexto(texto) {
+    if (/[^a-z\s]/.test(texto)) {
+        alert("El texto solo debe contener letras minúsculas y sin acentos.");
+        limpiarCaja();
+    }
+    return;
+}
+
 function usuarioEncripta() {
     let textoUsuario = document.getElementById("textarea").value;
     textoUsuario = validarTexto(textoUsuario);
