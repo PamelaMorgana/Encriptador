@@ -85,9 +85,9 @@ function copiarTexto() {
 
 function limpiarDesencriptado() {
     document.getElementById("encriptado").innerHTML = `
-        <img class="desencriptador__imagen" src="arrays/Muñeco.png" alt="Muñeco">
-        <h2 class="desencriptador__subtitulo">Ningun mensaje fue encontrado</h2>
-        <p class="desencriptador__texto">Ingresa el texto que deseas encriptar o desencriptar.</p>    
+            <img class="desencriptador__imagen" src="arrays/Muñeco.png" alt="Muñeco">
+            <h2 class="desencriptador__subtitulo">Ningun mensaje fue encontrado</h2>
+            <p class="desencriptador__texto">Ingresa el texto que deseas encriptar o desencriptar.</p>   
     `;
 }
 
