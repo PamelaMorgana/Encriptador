@@ -70,13 +70,13 @@ function mostrarTextoDesencriptado(texto) {
 }
 
 function limpiarCaja() {
-    document.querySelector("#textarea").value = ""; // Limpia el textarea
+    document.querySelector("#textarea").value = ""; 
 }
 
 function copiarTexto() {
     const texto = document.querySelector("#encriptado p").textContent;
     navigator.clipboard.writeText(texto).then(() => {
-        alert("Texto copiado al portapapeles");
+        Swal.fire("Texto copiado!");
         limpiarDesencriptado();
     }).catch(err => {
         alert("Error al copiar el texto: " + err);
@@ -92,8 +92,13 @@ function limpiarDesencriptado() {
 }
 
 function validarTexto(texto) {
+    let str = document.getElementById("textarea");
+    if (str.value.trim() === ""){
+        Swal.fire("No has ingresado un texto");
+        return;
+    }
     if (/[^a-z\s]/.test(texto)) {
-        alert("El texto solo debe contener letras minúsculas y sin acentos.");
+        Swal.fire("El texto solo debe contener letras minúsculas y sin acentos.");
         limpiarCaja();
         return undefined;
     }

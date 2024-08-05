@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header class="header">
@@ -21,8 +22,8 @@
                     <p class="alerta__texto">Solo letras minúsculas y sin acentos</p>
                 </div>
                 <div class="botones">
-                    <button onclick="usuarioEncripta()" class="boton__encriptar">Encriptar</button>
-                    <button onclick="usuarioDesencripta()" class="boton__desencriptar">Desencriptar</button>
+                    <button onclick="usuarioEncripta()" id="botonEncriptado" class="boton__encriptar">Encriptar</button>
+                    <button onclick="usuarioDesencripta()" id="botonDesencriptado" class="boton__desencriptar">Desencriptar</button>
                 </div>
             </div>
         </section>

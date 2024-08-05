@@ -100,6 +100,12 @@ body{
     width: 15rem;
     border-color: var(--color-obscuro);
 }
+.boton__desencriptar:disabled {
+    background: #898989;
+}
+.boton__encriptar:disabled {
+    background: #898989;
+}
 .boton__encriptar:hover{
     background-color: var(--color-terciario);
 }
@@ -156,7 +162,7 @@ body{
     color: var(--color-obscuro);
     border-radius: 1.5rem;
     padding: .5rem;
-    width: 15rem;
+    width: 14rem;
     border-color: var(--color-obscuro);
     margin-top: auto;
 }
@@ -171,7 +177,14 @@ body{
     position: absolute;
     bottom: 0;
 }
-@media (max-width: 1023px){
+
+@media (max-width: 1200px){
+    .copiar__boton{
+        width: auto;
+    }
+}
+
+@media (max-width: 1024px){
     
     .encriptador{
         display: flex;
@@ -256,5 +269,11 @@ body{
     }
     .footer{
         width: 100%;
+    }
+}
+
+@media (max-width: 360px){
+    .header{
+        height: 14dvh;
     }
 }
